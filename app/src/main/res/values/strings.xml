@@ -3,4 +3,12 @@
     <string name="philippine_history_quiz">Philippine History Quiz</string>
     <string name="todo">TODO</string>
     <string name="historical_events_in_the_philippines">Historical events in the Philippines</string>
+    <string name="select_a_category">Select a category</string>
+    <string name="pilippine_american_war">Pilippine-American War</string>
+    <string name="martial_law">Martial Law</string>
+    <string name="start_now">Start Now</string>
+    <string name="start_now1">Start Now</string>
+    <string name="martial_law1">Martial Law</string>
+    <string name="pilippine_american_war1">Pilippine-American War</string>
+    <string name="select_a_category1">Select a category</string>
 </resources>

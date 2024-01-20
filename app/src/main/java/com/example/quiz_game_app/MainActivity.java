@@ -32,25 +32,27 @@ public class MainActivity extends AppCompatActivity {
 
 
        final Button button = findViewById(R.id.button);
-         button.setOnClickListener(new View.OnClickListener() {
-              public void onClick(View v) {
-                // Code here executes on main thread after user presses button
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Check if the activity is still valid
+                if (!isFinishing()) {
+                    // Stop the animation
+                    button.clearAnimation();
 
-                  AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                    // Show an alert
+                    AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
                     alertDialog.setTitle("Alert");
                     alertDialog.setMessage("Game Started");
                     alertDialog.show();
 
-                    Got_to_Menu();
-
-
                     // Stop the music
-                  StopMusic();
+                    StopMusic();
 
-
-
-              }
-         });
+                    // Go to the Menu activity
+                    Got_to_Menu();
+                }
+            }
+        });
 
          startZoomAnimation(button);
 
@@ -75,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void StopMusic() {
-        mediaPlayer.stop();
         mediaPlayer.release();
     }
 
