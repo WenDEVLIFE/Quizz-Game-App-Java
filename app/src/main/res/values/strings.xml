@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Quiz_Game_App</string>
+    <string name="philippine_history_quiz">Philippine History Quiz</string>
+    <string name="todo">TODO</string>
+    <string name="historical_events_in_the_philippines">Historical events in the Philippines</string>
+</resources>
