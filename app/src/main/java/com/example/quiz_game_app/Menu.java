@@ -3,15 +3,22 @@ package com.example.quiz_game_app;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.TextView;
+
+import functions.MinimizeFunction;
 
 public class Menu extends AppCompatActivity {
-    private MediaPlayer mediaPlayer1;
+    private MediaPlayer mediaPlayer;
+
+    private MinimizeFunction minimizeFunction;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +26,15 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         // This will play the music pilipinas kong mahal mp3
-        mediaPlayer1 = MediaPlayer.create(this, R.raw.pilipianskongmahal);
+        mediaPlayer = MediaPlayer.create(this, R.raw.pilipianskongmahal);
 
-        mediaPlayer1.start();
-        mediaPlayer1.setLooping(true);
+        // This will start the music
+        mediaPlayer.start();
 
+        // This will loop the music
+        mediaPlayer.setLooping(true);
+
+        minimizeFunction = new MinimizeFunction(mediaPlayer);
         final Button button = findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -55,6 +66,8 @@ public class Menu extends AppCompatActivity {
                 alertDialog.show();
                 alertDialog.closeOptionsMenu();
 
+                Intent intent = new Intent(Menu.this, US_PH_QUIZ1.class);
+                startActivity(intent);
                 // Stop the music
                 StopMusic();
             }
@@ -77,7 +90,24 @@ public class Menu extends AppCompatActivity {
         view.startAnimation(scaleAnimation);
     }
 
+    // This serve as a function where the user will
+    // be able to go back to the previous activity and stop the music
+    protected void onPause() {
+        super.onPause();
+        minimizeFunction.onPause();
+    }
+
+    protected void onResume (){
+        super.onResume();
+        minimizeFunction.onResume();
+    }
+
+    protected void onDestroy (){
+        super.onDestroy();
+        minimizeFunction.onDestroy();
+    }
+
     private void StopMusic() {
-        mediaPlayer1.release();
+        mediaPlayer.release();
     }
 }

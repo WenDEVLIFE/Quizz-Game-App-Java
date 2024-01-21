@@ -7,15 +7,19 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 
+import functions.MinimizeFunction;
+
 public class MainActivity extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
+    private Button button;
+
+    private MinimizeFunction minimizeFunction;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -24,65 +28,70 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mediaPlayer = MediaPlayer.create(this, R.raw.pilipianskongmahal);
-
         mediaPlayer.start();
         mediaPlayer.setLooping(true);
 
+       minimizeFunction = new MinimizeFunction(mediaPlayer);
 
-
-
-       final Button button = findViewById(R.id.button);
+        button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Check if the activity is still valid
                 if (!isFinishing()) {
-                    // Stop the animation
                     button.clearAnimation();
-
-                    // Show an alert
                     AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
                     alertDialog.setTitle("Alert");
                     alertDialog.setMessage("Game Started");
                     alertDialog.show();
-
-                    // Stop the music
                     StopMusic();
-
-                    // Go to the Menu activity
                     Got_to_Menu();
                 }
             }
         });
 
-         startZoomAnimation(button);
+        startZoomAnimation(button);
+    }
 
+    // These functions purposes are to play the music, pause the music, resume the music, and stop the music
+    protected void onPause() {
+        super.onPause();
+        minimizeFunction.onPause();
+    }
+
+    protected  void onResume() {
+        super.onResume();
+        minimizeFunction.onResume();
 
     }
 
+    protected  void onDestroy() {
+        super.onDestroy();
+        minimizeFunction.onDestroy();
 
-    // Zoom Animation of the button
+    }
+
+    private void StopMusic() {
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    // This functuion served as a bridge to the Menu class
+    private void Got_to_Menu() {
+        Intent intent = new Intent(this, Menu.class);
+        startActivity(intent);
+    }
+
     private void startZoomAnimation(Button button) {
-        // Morph Animation
         ScaleAnimation scaleAnimation = new ScaleAnimation(
                 1.0f, 1.2f,
                 1.0f, 1.2f,
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );
-        scaleAnimation.setDuration(1000);   // Set the duration of the animation in milliseconds
-        scaleAnimation.setRepeatCount(Animation.INFINITE); // Repeat animation indefinitely
-        scaleAnimation.setRepeatMode(Animation.REVERSE); // Reverse animation at the end so the button will zoom back out
-
+        scaleAnimation.setDuration(1000);
+        scaleAnimation.setRepeatCount(Animation.INFINITE);
+        scaleAnimation.setRepeatMode(Animation.REVERSE);
         button.startAnimation(scaleAnimation);
     }
-
-    private void StopMusic() {
-        mediaPlayer.release();
-    }
-
-    public void Got_to_Menu() {
-        Intent intent = new Intent(this, Menu.class);
-        startActivity(intent);
-    }
-
 }

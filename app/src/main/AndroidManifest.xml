@@ -6,13 +6,21 @@
             android:allowBackup="true"
             android:dataExtractionRules="@xml/data_extraction_rules"
             android:fullBackupContent="@xml/backup_rules"
+            android:hardwareAccelerated="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.Quiz_Game_App"
-            android:hardwareAccelerated="true"
             tools:targetApi="31">
+        <activity
+                android:name=".US_PH_QUIZ1"
+                android:exported="false" />
+        <activity
+                android:name=".Quiz_US_VS_PH_1"
+                android:exported="false"
+                android:label="@string/title_activity_quiz_us_vs_ph1"
+                android:theme="@style/Theme.Quiz_Game_App" />
         <activity
                 android:name=".Menu"
                 android:exported="false" />

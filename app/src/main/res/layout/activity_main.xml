@@ -4,24 +4,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/history"
         tools:context=".MainActivity">
 
-    <ImageView
-            android:layout_width="2045dp"
-            android:layout_height="1150dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/history"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="51dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/historical_events_in_the_philippines" />
+
+
 
     <TextView
-            android:text="Philippine History Quizz"
+            android:text="@string/philippine_history_quizz"
             android:layout_width="262dp"
             android:layout_height="192dp"
             android:id="@+id/textView"
@@ -41,7 +31,7 @@
             app:layout_constraintVertical_bias="0.071" />
 
     <Button
-            android:text="Press to start"
+            android:text="@string/press_to_start"
             android:layout_width="167dp"
             android:layout_height="72dp"
             android:id="@+id/button"

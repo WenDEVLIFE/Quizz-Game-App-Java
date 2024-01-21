@@ -41,9 +41,9 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:layout_marginTop="316dp"
+            android:layout_marginTop="300dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="36dp"
+            android:layout_marginStart="64dp"
             app:layout_constraintStart_toStartOf="parent"
             android:contentDescription="@string/historical_events_in_the_philippines" />
 
@@ -55,22 +55,28 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:layout_marginTop="760dp"
+            android:layout_marginTop="664dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="104dp"
             app:layout_constraintStart_toStartOf="parent"
             android:contentDescription="@string/historical_events_in_the_philippines" />
 
+    <!-- This will set the imageview to the center of the layout -->
+
     <ImageView
-            android:layout_width="389dp"
-            android:layout_height="248dp"
-            tools:srcCompat="@drawable/war"
-            android:id="@+id/imageView2"
-            android:layout_marginTop="4dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView1"
-            android:layout_marginStart="4dp"
+
+
+            android:id="@+id/imageview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/martialaw"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="@string/historical_events_in_the_philippines" />
+            app:layout_constraintBottom_toTopOf="@id/button3"
+            android:layout_marginTop="16dp"
+            app:layout_constraintVertical_bias="0.828"
+            app:layout_constraintHorizontal_bias="0.577" />
 
     <Button
             android:text="@string/start_now1"
@@ -78,7 +84,7 @@
             android:layout_height="61dp"
             android:id="@+id/button2"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="16dp"
@@ -87,8 +93,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="#FFFFFF"
             android:fontFamily="sans-serif-condensed"
-            app:layout_constraintHorizontal_bias="0.251"
-            app:layout_constraintVertical_bias="0.097" />
+            app:layout_constraintVertical_bias="0.059" />
 
     <Button
             android:text="@string/start_now"
@@ -105,19 +110,22 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="#FFFFFF"
             android:fontFamily="sans-serif-condensed"
-            app:layout_constraintVertical_bias="1.0"
-            app:layout_constraintHorizontal_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.337" />
 
     <ImageView
-            android:layout_width="322dp"
-            android:layout_height="215dp"
-            tools:srcCompat="@drawable/martialaw"
-            android:id="@+id/imageView3"
-            android:layout_marginTop="52dp"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
-            android:layout_marginStart="16dp"
+            android:id="@+id/imageview_second"
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:src="@drawable/history1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="@string/historical_events_in_the_philippines" />
+            app:layout_constraintBottom_toTopOf="@id/button3"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/historical_events_in_the_philippines"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintVertical_bias="0.096" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
