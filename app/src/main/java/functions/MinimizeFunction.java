@@ -34,7 +34,7 @@ public class MinimizeFunction {
         }
     }
 
-    private void StopMusic() {
+    public void StopMusic() {
         if (mediaPlayer != null) {
             mediaPlayer.release();
             mediaPlayer = null;

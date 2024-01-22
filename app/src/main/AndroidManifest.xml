@@ -13,14 +13,29 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Quiz_Game_App"
             tools:targetApi="31">
+        <!-- Your existing activities -->
         <activity
-                android:name=".US_PH_QUIZ1"
+                android:name="Philippine_American_Quiz_package.US_PH_QUIZ5"
                 android:exported="false" />
         <activity
-                android:name=".Quiz_US_VS_PH_1"
-                android:exported="false"
-                android:label="@string/title_activity_quiz_us_vs_ph1"
-                android:theme="@style/Theme.Quiz_Game_App" />
+                android:name="Philippine_American_Quiz_package.US_PH_QUIZ4"
+                android:exported="false" />
+        <!-- ... (other activities) ... -->
+
+        <!-- Add the TotalScore_Activity1 declaration -->
+        <activity
+                android:name="Philippine_American_Quiz_package.TotalScore_Activity1"
+                android:exported="false" />
+
+        <activity
+                android:name="Philippine_American_Quiz_package.US_PH_QUIZ3"
+                android:exported="false" />
+        <activity
+                android:name="Philippine_American_Quiz_package.US_PH_QUIZ2"
+                android:exported="false" />
+        <activity
+                android:name="Philippine_American_Quiz_package.US_PH_QUIZ1"
+                android:exported="false" />
         <activity
                 android:name=".Menu"
                 android:exported="false" />

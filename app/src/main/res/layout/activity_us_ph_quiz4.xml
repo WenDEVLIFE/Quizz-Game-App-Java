@@ -5,10 +5,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#008DD5"
-        tools:context="Philippine_American_Quiz_package.US_PH_QUIZ1">
+        tools:context="Philippine_American_Quiz_package.US_PH_QUIZ4">
+
+    <ImageView
+            android:layout_width="62dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/ideas"
+            android:id="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.918"
+            android:layout_marginStart="16dp" />
+
+    <ImageView
+            android:layout_width="57dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/chronometer"
+            android:id="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintHorizontal_bias="0.505" />
 
     <TextView
-            android:text="Who is the first president of the Philippines?"
+            android:text="@string/which_treaty_officially_ended_the_philippine_american_war_ceding_the_philippines_to_the_united_states"
             android:textStyle="bold"
             android:textSize="30sp"
             android:textColor="@color/white"
@@ -22,22 +45,7 @@
             app:layout_constraintHorizontal_bias="1.0" />
 
     <TextView
-            android:text="Quiz 1"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:layout_width="106dp"
-            android:layout_height="41dp"
-            android:id="@+id/textView5"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.253" />
-
-    <TextView
-            android:text="Quiz 1"
+            android:text="@string/quiz_4"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="30sp"
@@ -49,7 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.253" />
+            app:layout_constraintVertical_bias="0.516" />
 
     <TextView
             android:text="Time: 00: 00"
@@ -68,76 +76,76 @@
             app:layout_constraintVertical_bias="0.0" />
 
     <RadioButton
-            android:text="Emilio Aguinaldo"
+            android:text="@string/treaty_of_versailles_1919"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="182dp"
+            android:layout_height="55dp"
             android:id="@+id/radioButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.133"
-            android:layout_marginBottom="352dp" />
+            app:layout_constraintHorizontal_bias="0.062"
+            android:layout_marginBottom="304dp" />
 
     <RadioButton
-            android:text="Bongbong Marcos"
+            android:text="@string/treaty_of_tordesillas_1494"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="175dp"
+            android:layout_height="74dp"
             android:id="@+id/radioButton2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.131"
-            android:layout_marginBottom="260dp" />
+            app:layout_constraintHorizontal_bias="0.059"
+            android:layout_marginBottom="212dp" />
 
     <RadioButton
-            android:text="Ramon Magsaysay"
+            android:text="@string/treaty_of_paris_1898"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="164dp"
+            android:layout_height="61dp"
             android:id="@+id/radioButton3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.872"
-            android:layout_marginBottom="260dp" />
+            app:layout_constraintHorizontal_bias="0.944"
+            android:layout_marginBottom="220dp" />
 
     <RadioButton
-            android:text="Andres Bonifacio"
+            android:text="@string/treaty_of_portsmouth_1905"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="176dp"
+            android:layout_height="61dp"
             android:id="@+id/radioButton1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.849"
-            android:layout_marginBottom="352dp" />
+            app:layout_constraintHorizontal_bias="0.995"
+            android:layout_marginBottom="296dp" />
 
     <Button
             android:text="Click to Submit"
             android:layout_width="243dp"
             android:layout_height="58dp"
-            android:id="@+id/button4"
+            android:id="@+id/submit_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="172dp" />
+            android:layout_marginBottom="136dp" />
 
     <Button
             android:text="Click to next page"
             android:layout_width="243dp"
             android:layout_height="58dp"
-            android:id="@+id/button5"
+            android:id="@+id/next_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="36dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView8" />
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/score_result" />
 
     <TextView
             android:text="Your answer:"
@@ -145,32 +153,10 @@
             android:layout_height="30dp"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:id="@+id/textView8"
+            android:id="@+id/score_result"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.266"
             android:layout_marginBottom="28dp" />
-
-    <ImageView
-            android:layout_width="62dp"
-            android:layout_height="48dp"
-            app:srcCompat="@drawable/ideas"
-            android:id="@+id/imageView2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView5"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.855" />
-
-    <ImageView
-            android:layout_width="57dp"
-            android:layout_height="48dp"
-            app:srcCompat="@drawable/chronometer"
-            android:id="@+id/imageView3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textView7"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintHorizontal_bias="0.505" />
 </androidx.constraintlayout.widget.ConstraintLayout>

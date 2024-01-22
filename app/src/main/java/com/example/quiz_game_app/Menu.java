@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
-import android.widget.TextView;
 
+import Philippine_American_Quiz_package.US_PH_QUIZ1;
 import functions.MinimizeFunction;
 
 public class Menu extends AppCompatActivity {

@@ -58,4 +58,26 @@
     </string>
     <string name="string_historical_events_in_the_philippines">\@string/historical_events_in_the_philippines</string>
     <string name="string_martial_law_in_the_philippines">\@string/martial_law_in_the_philippines</string>
+    <string name="who_was_the_president_of_the_united_states_during_the_philippine_american_war">Who was the President of the United States during the Philippine-American War?</string>
+    <string name="quiz_3">Quiz 3</string>
+    <string name="time_00_00">Time: 00: 00</string>
+    <string name="theodore_roosevelt">Theodore Roosevelt</string>
+    <string name="william_mckinley">William McKinley</string>
+    <string name="andrew_johnson">Andrew Johnson</string>
+    <string name="woodrow_wilson">Woodrow Wilson</string>
+    <string name="click_to_submit">Click to Submit</string>
+    <string name="click_to_next_page">Click to next page</string>
+    <string name="your_answer">Your answer:</string>
+    <string name="treaty_of_paris_1898">Treaty of Paris (1898)</string>
+    <string name="treaty_of_portsmouth_1905">Treaty of Portsmouth (1905)</string>
+    <string name="treaty_of_tordesillas_1494">Treaty of Tordesillas (1494)</string>
+    <string name="treaty_of_versailles_1919">Treaty of Versailles (1919)</string>
+    <string name="quiz_4">Quiz 4</string>
+    <string name="which_treaty_officially_ended_the_philippine_american_war_ceding_the_philippines_to_the_united_states">Which treaty officially ended the Philippine-American War, ceding the Philippines to the United States?</string>
+    <string name="what_was_the_primary_reason_for_the_philippine_american_war_s_continuation_after_the_treaty_of_paris_was_signed">What was the primary reason for the Philippine-American War\'s continuation after the Treaty of Paris was signed?</string>
+    <string name="quiz_5">Quiz 5</string>
+    <string name="economic_disputes">Economic disputes</string>
+    <string name="religious_conflicts">Religious conflicts</string>
+    <string name="cultural_differences">Cultural differences</string>
+    <string name="resistance_against_colonization">Resistance against colonization</string>
 </resources>
