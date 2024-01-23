@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 
+import Philippine_American_Quiz_package.PhDifficulty;
 import Philippine_American_Quiz_package.US_PH_QUIZ1;
 import functions.MinimizeFunction;
 
@@ -48,6 +49,10 @@ public class Menu extends AppCompatActivity {
                 alertDialog.show();
                 alertDialog.closeOptionsMenu();
 
+
+                Intent intent = new Intent(Menu.this, PhDifficulty.class);
+                startActivity(intent);
+
                 // Stop the music
                 StopMusic();
             }
@@ -66,8 +71,6 @@ public class Menu extends AppCompatActivity {
                 alertDialog.show();
                 alertDialog.closeOptionsMenu();
 
-                Intent intent = new Intent(Menu.this, US_PH_QUIZ1.class);
-                startActivity(intent);
                 // Stop the music
                 StopMusic();
             }

@@ -15,6 +15,7 @@ import functions.MinimizeFunction;
 
 public class TotalScore_Activity1 extends AppCompatActivity {
 
+    // variable for the music and etc for the minimize function
     private MediaPlayer mediaPlayer;
     private int total_score;
 
@@ -28,7 +29,7 @@ public class TotalScore_Activity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_total_score1);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.pilipianskongmahal);
+        mediaPlayer = MediaPlayer.create(this, R.raw.totalsound);
         mediaPlayer.start();
         mediaPlayer.setLooping(true);
 
@@ -80,6 +81,9 @@ public class TotalScore_Activity1 extends AppCompatActivity {
     public void StopMusic() {
         mediaPlayer.stop();
     }
+
+
+    // Load Score and message
     public void loadScore() {
         Intent intentph5 = getIntent();
         int score_received5 = intentph5.getIntExtra("score5", 0);

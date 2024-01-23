@@ -1,5 +1,6 @@
 package Philippine_American_Quiz_package;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,7 +8,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -33,7 +37,7 @@ public class US_PH_QUIZ3 extends AppCompatActivity {
 
     private int score_received3;
 
-
+    private ImageView timerImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -74,6 +78,8 @@ public class US_PH_QUIZ3 extends AppCompatActivity {
 
                 wrong = MediaPlayer.create(US_PH_QUIZ3.this, R.raw.wrong);
                 wrong.start();
+
+                timerImage.clearAnimation();
 
                 // Display to the textview that user didn't answer in time
                 correctText.setText("Correct answer: You didn't answer in time!");
@@ -123,6 +129,9 @@ public class US_PH_QUIZ3 extends AppCompatActivity {
         button = findViewById(R.id.submit_button);
         button.setOnClickListener(v -> {
 
+            // Stop the timer
+            timerImage.clearAnimation();
+
             if (radioButton1.isChecked()) {
                 wrong_Method();
             }
@@ -148,7 +157,11 @@ public class US_PH_QUIZ3 extends AppCompatActivity {
                 wrong_Method();
             }
             else {
-                wrong_Method();
+                AlertDialog alertDialog = new AlertDialog.Builder(US_PH_QUIZ3.this).create();
+                alertDialog.setTitle("Alert");
+                alertDialog.setMessage("Please select an answer!");
+                alertDialog.show();
+
             }
         });
 
@@ -160,6 +173,9 @@ public class US_PH_QUIZ3 extends AppCompatActivity {
             nextPage();
         });
 
+        timerImage = findViewById(R.id.imageView3);
+
+        startZoomAnimation(timerImage);
 
     }
 
@@ -204,6 +220,22 @@ public class US_PH_QUIZ3 extends AppCompatActivity {
         button1.setVisibility(View.VISIBLE);
         button.setVisibility(View.INVISIBLE);
     }
+
+    // Zoom animation for the timer
+    private void startZoomAnimation(ImageView timerImage) {
+        ScaleAnimation scaleAnimation = new ScaleAnimation(
+                1.0f, 1.2f,
+                1.0f, 1.2f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
+        scaleAnimation.setDuration(1000);
+        scaleAnimation.setRepeatCount(Animation.INFINITE);
+        scaleAnimation.setRepeatMode(Animation.REVERSE);
+        timerImage.startAnimation(scaleAnimation);
+    }
+
+
     public void nextPage(){
 
          // Go to the next page

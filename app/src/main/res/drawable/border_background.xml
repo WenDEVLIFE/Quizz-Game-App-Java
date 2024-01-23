@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Add a shape drawable for the border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/black" />
+            <stroke
+                    android:color="@android:color/black"
+                    android:width="4dp"
+                    />
+        </shape>
+    </item>
+    <!-- Add a shadow -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="4dp" /> <!-- Adjust the radius as needed -->
+            <padding
+                    android:left="4dp"
+                    android:right="4dp"
+                    android:top="4dp"
+                    android:bottom="4dp" />
+        </shape>
+    </item>
+    <!-- Add your image source as the third item -->
+    <item android:drawable="@drawable/martialaw" />
+</layer-list>

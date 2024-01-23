@@ -13,20 +13,20 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Quiz_Game_App"
             tools:targetApi="31">
+        <activity
+                android:name="Philippine_American_Quiz_package.PhDifficulty"
+                android:exported="false" />
         <!-- Your existing activities -->
         <activity
                 android:name="Philippine_American_Quiz_package.US_PH_QUIZ5"
                 android:exported="false" />
         <activity
                 android:name="Philippine_American_Quiz_package.US_PH_QUIZ4"
-                android:exported="false" />
-        <!-- ... (other activities) ... -->
-
+                android:exported="false" /> <!-- ... (other activities) ... -->
         <!-- Add the TotalScore_Activity1 declaration -->
         <activity
                 android:name="Philippine_American_Quiz_package.TotalScore_Activity1"
                 android:exported="false" />
-
         <activity
                 android:name="Philippine_American_Quiz_package.US_PH_QUIZ3"
                 android:exported="false" />
