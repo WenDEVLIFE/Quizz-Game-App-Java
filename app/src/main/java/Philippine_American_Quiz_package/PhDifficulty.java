@@ -13,6 +13,7 @@ import android.widget.Button;
 import com.example.quiz_game_app.Menu;
 import com.example.quiz_game_app.R;
 
+import PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1;
 import functions.MinimizeFunction;
 
 public class PhDifficulty extends AppCompatActivity {
@@ -39,8 +40,7 @@ public class PhDifficulty extends AppCompatActivity {
         final Button button = findViewById(R.id.easybutton);
         button.setOnClickListener(new android.view.View.OnClickListener() {
             public void onClick(android.view.View v) {
-                // Stop the animation
-                button.clearAnimation();
+
 
                 // Stop the music
                 minimizeFunction.StopMusic();
@@ -55,7 +55,8 @@ public class PhDifficulty extends AppCompatActivity {
             public void onClick(android.view.View v) {
                 // Stop the animation
                 button2.clearAnimation();
-
+                Intent intent = new Intent(PhDifficulty.this, PH_USA_Normal_Quiz1.class);
+                startActivity(intent);
                 // Stop the music
                 minimizeFunction.StopMusic();
             }
@@ -64,8 +65,7 @@ public class PhDifficulty extends AppCompatActivity {
         final Button button3 = findViewById(R.id.hardbutton);
         button3.setOnClickListener(new android.view.View.OnClickListener() {
             public void onClick(android.view.View v) {
-                // Stop the animation
-                button3.clearAnimation();
+
 
                 // Stop the music
                 minimizeFunction.StopMusic();
@@ -75,24 +75,17 @@ public class PhDifficulty extends AppCompatActivity {
         final Button button4 = findViewById(R.id.backbutton);
         button4.setOnClickListener(new android.view.View.OnClickListener() {
             public void onClick(android.view.View v) {
-                // Stop the animation
-                button4.clearAnimation();
+
 
                 // Stop the music
                 minimizeFunction.StopMusic();
 
+
+                // This will go back to the menu
                 Intent intent = new Intent(PhDifficulty.this, Menu.class);
                 startActivity(intent);
             }
         });
-
-        // This will start the animation
-        startZoomAnimation(button);
-        startZoomAnimation(button2);
-        startZoomAnimation(button3);
-        startZoomAnimation(button4);
-
-
 
     }
 

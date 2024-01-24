@@ -14,9 +14,29 @@
             android:theme="@style/Theme.Quiz_Game_App"
             tools:targetApi="31">
         <activity
-                android:name="Philippine_American_Quiz_package.PhDifficulty"
+                android:name="PhilAmericanWar_Normal_package.NormalScore"
                 android:exported="false" />
-        <!-- Your existing activities -->
+        <activity
+                android:name="PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz5"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Normal_package.US_PH_QUIZ5"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz4"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz3"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz2"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1"
+                android:exported="false" />
+        <activity
+                android:name="Philippine_American_Quiz_package.PhDifficulty"
+                android:exported="false" /> <!-- Your existing activities -->
         <activity
                 android:name="Philippine_American_Quiz_package.US_PH_QUIZ5"
                 android:exported="false" />

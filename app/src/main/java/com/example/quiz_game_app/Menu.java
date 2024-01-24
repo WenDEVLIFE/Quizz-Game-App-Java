@@ -39,8 +39,7 @@ public class Menu extends AppCompatActivity {
         final Button button = findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Stop the animation
-                button.clearAnimation();
+
 
                 // Show an alert
                 AlertDialog alertDialog = new AlertDialog.Builder(Menu.this).create();
@@ -61,8 +60,7 @@ public class Menu extends AppCompatActivity {
         final Button button1 = findViewById(R.id.button3);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Stop the animation
-                button1.clearAnimation();
+
 
                 // Show an alert
                 AlertDialog alertDialog = new AlertDialog.Builder(Menu.this).create();
@@ -76,9 +74,7 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        // Start the zoom animation for the buttons
-        startZoomAnimation(button);
-        startZoomAnimation(button1);
+
     }
 
     private void startZoomAnimation(final View view) {

@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        startZoomAnimation(button);
     }
 
     // These functions purposes are to play the music, pause the music, resume the music, and stop the music

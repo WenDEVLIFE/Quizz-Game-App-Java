@@ -3,9 +3,9 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:background="#6895D2"
         android:layout_height="match_parent"
-        tools:context="Philippine_American_Quiz_package.US_PH_QUIZ5">
+        android:background="#6895D2"
+        tools:context="PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1">
 
     <ImageView
             android:layout_width="62dp"
@@ -30,7 +30,7 @@
             app:layout_constraintHorizontal_bias="0.505" />
 
     <TextView
-            android:text="@string/what_was_the_primary_reason_for_the_philippine_american_war_s_continuation_after_the_treaty_of_paris_was_signed"
+            android:text="What was the main cause of the conflict between the Philippines and the United States during the war?"
             android:textStyle="bold"
             android:textSize="30sp"
             android:textAlignment="center"
@@ -46,7 +46,7 @@
             app:layout_constraintHorizontal_bias="1.0" />
 
     <TextView
-            android:text="@string/quiz_5"
+            android:text="Quiz 1"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="30sp"
@@ -121,7 +121,7 @@
             android:layout_marginBottom="220dp" />
 
     <RadioButton
-            android:text="@string/resistance_against_colonization"
+            android:text="Filipino desire for independence"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_width="176dp"

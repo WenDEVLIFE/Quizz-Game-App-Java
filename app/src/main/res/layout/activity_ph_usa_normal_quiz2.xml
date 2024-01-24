@@ -3,9 +3,9 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:background="#6895D2"
         android:layout_height="match_parent"
-        tools:context="Philippine_American_Quiz_package.US_PH_QUIZ5">
+        android:background="#6895D2"
+        tools:context="PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz2">
 
     <ImageView
             android:layout_width="62dp"
@@ -30,7 +30,7 @@
             app:layout_constraintHorizontal_bias="0.505" />
 
     <TextView
-            android:text="@string/what_was_the_primary_reason_for_the_philippine_american_war_s_continuation_after_the_treaty_of_paris_was_signed"
+            android:text="Who is this on the picture"
             android:textStyle="bold"
             android:textSize="30sp"
             android:textAlignment="center"
@@ -42,11 +42,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="72dp"
-            app:layout_constraintHorizontal_bias="1.0" />
+            android:layout_marginTop="64dp"
+            app:layout_constraintHorizontal_bias="0.495" />
 
     <TextView
-            android:text="@string/quiz_5"
+            android:text="Quiz 2"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="30sp"
@@ -75,11 +75,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.233" />
 
     <RadioButton
-            android:text="@string/economic_disputes"
+            android:text="Apolinario Mabini"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_width="182dp"
@@ -93,7 +93,7 @@
             android:layout_marginBottom="304dp" />
 
     <RadioButton
-            android:text="@string/religious_conflicts"
+            android:text="Emilio Aguinaldo"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_width="175dp"
@@ -107,7 +107,7 @@
             android:layout_marginBottom="212dp" />
 
     <RadioButton
-            android:text="@string/cultural_differences"
+            android:text="Manuel Roxas"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_width="164dp"
@@ -121,7 +121,7 @@
             android:layout_marginBottom="220dp" />
 
     <RadioButton
-            android:text="@string/resistance_against_colonization"
+            android:text="Donald Trump"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_width="176dp"
@@ -169,4 +169,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.266"
             android:layout_marginBottom="28dp" />
+
+    <ImageView
+            android:layout_width="172dp"
+            android:layout_height="129dp"
+            app:srcCompat="@drawable/mabini4"
+            android:id="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.497"
+            android:layout_marginBottom="8dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
