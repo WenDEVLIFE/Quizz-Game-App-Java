@@ -11,8 +11,8 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 
-import Philippine_American_Quiz_package.PhDifficulty;
-import Philippine_American_Quiz_package.US_PH_QUIZ1;
+import GameDiffulcty_Package.MartialDifficulty;
+import GameDiffulcty_Package.PhDifficulty;
 import functions.MinimizeFunction;
 
 public class Menu extends AppCompatActivity {
@@ -68,6 +68,9 @@ public class Menu extends AppCompatActivity {
                 alertDialog.setMessage("Martial Law was declared on September 21, 1972 and ended on January 17, 1981.");
                 alertDialog.show();
                 alertDialog.closeOptionsMenu();
+
+                Intent intent = new Intent(Menu.this, MartialDifficulty.class);
+                startActivity(intent);
 
                 // Stop the music
                 StopMusic();

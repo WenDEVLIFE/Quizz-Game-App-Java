@@ -4,8 +4,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#6895D2"
-        tools:context="GameDiffulcty_Package.PhDifficulty">
+        android:background="#0B60B0"
+        tools:context="GameDiffulcty_Package.MartialDifficulty">
 
     <TextView
             android:text="Select a difficulty"

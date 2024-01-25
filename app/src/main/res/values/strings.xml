@@ -80,4 +80,5 @@
     <string name="religious_conflicts">Religious conflicts</string>
     <string name="cultural_differences">Cultural differences</string>
     <string name="resistance_against_colonization">Resistance against colonization</string>
+    <string name="title_activity_total_score_martial_easy">TotalScoreMartialEasy</string>
 </resources>

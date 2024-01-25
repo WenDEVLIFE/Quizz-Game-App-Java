@@ -1,4 +1,4 @@
-package Philippine_American_Quiz_package;
+package GameDiffulcty_Package;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +15,7 @@ import com.example.quiz_game_app.R;
 
 import PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz1;
 import PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1;
+import Philippine_American_Quiz_package.US_PH_QUIZ1;
 import functions.MinimizeFunction;
 
 public class PhDifficulty extends AppCompatActivity {

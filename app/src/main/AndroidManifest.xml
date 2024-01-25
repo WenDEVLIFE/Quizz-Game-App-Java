@@ -14,6 +14,29 @@
             android:theme="@style/Theme.Quiz_Game_App"
             tools:targetApi="31">
         <activity
+                android:name="MartialLaw_Easy_Package.TotalScoreMartialEasy"
+                android:exported="false"
+                android:label="@string/title_activity_total_score_martial_easy"
+                android:theme="@style/Theme.Quiz_Game_App" />
+        <activity
+                android:name="MartialLaw_Easy_Package.MartialLaw_Easy_Quiz5"
+                android:exported="false" />
+        <activity
+                android:name="MartialLaw_Easy_Package.MartialLaw_Easy_Quiz4"
+                android:exported="false" />
+        <activity
+                android:name="MartialLaw_Easy_Package.MartialLaw_Easy_Quiz3"
+                android:exported="false" />
+        <activity
+                android:name="MartialLaw_Easy_Package.MartialLaw_Easy_Quiz2"
+                android:exported="false" />
+        <activity
+                android:name="GameDiffulcty_Package.MartialDifficulty"
+                android:exported="false" />
+        <activity
+                android:name="MartialLaw_Easy_Package.MartialLaw_Easy_Quiz1"
+                android:exported="false" />
+        <activity
                 android:name="PhilAmericanWar_Hard_Package.TotalScoreHard"
                 android:exported="false" />
         <activity
@@ -53,7 +76,7 @@
                 android:name="PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1"
                 android:exported="false" />
         <activity
-                android:name="Philippine_American_Quiz_package.PhDifficulty"
+                android:name="GameDiffulcty_Package.PhDifficulty"
                 android:exported="false" /> <!-- Your existing activities -->
         <activity
                 android:name="Philippine_American_Quiz_package.US_PH_QUIZ5"
