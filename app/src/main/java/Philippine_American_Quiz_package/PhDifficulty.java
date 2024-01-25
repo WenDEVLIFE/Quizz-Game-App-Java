@@ -13,6 +13,7 @@ import android.widget.Button;
 import com.example.quiz_game_app.Menu;
 import com.example.quiz_game_app.R;
 
+import PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz1;
 import PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1;
 import functions.MinimizeFunction;
 
@@ -47,6 +48,7 @@ public class PhDifficulty extends AppCompatActivity {
 
                 Intent intent = new Intent(PhDifficulty.this, US_PH_QUIZ1.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -59,6 +61,7 @@ public class PhDifficulty extends AppCompatActivity {
                 startActivity(intent);
                 // Stop the music
                 minimizeFunction.StopMusic();
+                finish();
             }
         });
 
@@ -66,9 +69,11 @@ public class PhDifficulty extends AppCompatActivity {
         button3.setOnClickListener(new android.view.View.OnClickListener() {
             public void onClick(android.view.View v) {
 
-
+                Intent intent = new Intent(PhDifficulty.this, PH_USA_Hard_Quiz1.class);
+                startActivity(intent);
                 // Stop the music
                 minimizeFunction.StopMusic();
+                finish();
             }
         });
 
@@ -84,6 +89,8 @@ public class PhDifficulty extends AppCompatActivity {
                 // This will go back to the menu
                 Intent intent = new Intent(PhDifficulty.this, Menu.class);
                 startActivity(intent);
+                finish();
+
             }
         });
 

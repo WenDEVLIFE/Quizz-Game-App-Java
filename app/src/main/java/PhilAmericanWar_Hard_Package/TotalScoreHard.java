@@ -1,4 +1,4 @@
-package Philippine_American_Quiz_package;
+package PhilAmericanWar_Hard_Package;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,10 +11,11 @@ import android.widget.TextView;
 import com.example.quiz_game_app.Menu;
 import com.example.quiz_game_app.R;
 
+import PhilAmericanWar_Normal_package.NormalScore;
+import PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1;
 import functions.MinimizeFunction;
 
-public class TotalScore_Activity1 extends AppCompatActivity {
-
+public class TotalScoreHard extends AppCompatActivity {
     // variable for the music and etc for the minimize function
     private MediaPlayer mediaPlayer;
     private int total_score;
@@ -27,8 +28,7 @@ public class TotalScore_Activity1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_total_score1);
-
+        setContentView(R.layout.activity_total_score_hard);
         mediaPlayer = MediaPlayer.create(this, R.raw.totalsound);
         mediaPlayer.start();
         mediaPlayer.setLooping(true);
@@ -40,7 +40,7 @@ public class TotalScore_Activity1 extends AppCompatActivity {
 
         final Button button = findViewById(R.id.trybutton);
         button.setOnClickListener(v -> {
-            Intent intentph = new Intent(TotalScore_Activity1.this, US_PH_QUIZ1.class);
+            Intent intentph = new Intent(TotalScoreHard.this, PH_USA_Hard_Quiz1.class);
             startActivity(intentph);
 
             StopMusic();
@@ -49,12 +49,11 @@ public class TotalScore_Activity1 extends AppCompatActivity {
 
         final Button button1 = findViewById(R.id.main_menu_button);
         button1.setOnClickListener(v -> {
-            Intent intentmenu = new Intent(TotalScore_Activity1.this, Menu.class);
+            Intent intentmenu = new Intent(TotalScoreHard.this, Menu.class);
             startActivity(intentmenu);
 
             StopMusic();
             finish();
-
         });
     }
 
@@ -113,6 +112,4 @@ public class TotalScore_Activity1 extends AppCompatActivity {
             total_score_text.setText("Score: " + total_score);
         }
     }
-
-
 }

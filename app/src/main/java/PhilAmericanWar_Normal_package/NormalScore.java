@@ -44,6 +44,7 @@ public class NormalScore extends AppCompatActivity {
             startActivity(intentph);
 
             StopMusic();
+            finish();
         });
 
         final Button button1 = findViewById(R.id.main_menu_button);
@@ -52,7 +53,7 @@ public class NormalScore extends AppCompatActivity {
             startActivity(intentmenu);
 
             StopMusic();
-
+            finish();
         });
     }
 

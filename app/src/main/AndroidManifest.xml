@@ -14,6 +14,24 @@
             android:theme="@style/Theme.Quiz_Game_App"
             tools:targetApi="31">
         <activity
+                android:name="PhilAmericanWar_Hard_Package.TotalScoreHard"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz5"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz4"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz3"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz2"
+                android:exported="false" />
+        <activity
+                android:name="PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz1"
+                android:exported="false" />
+        <activity
                 android:name="PhilAmericanWar_Normal_package.NormalScore"
                 android:exported="false" />
         <activity

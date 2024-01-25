@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     alertDialog.show();
                     StopMusic();
                     Got_to_Menu();
+                    finish();
                 }
             }
         });
