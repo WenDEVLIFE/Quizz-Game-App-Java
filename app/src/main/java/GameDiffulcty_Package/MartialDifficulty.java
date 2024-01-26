@@ -14,6 +14,7 @@ import com.example.quiz_game_app.Menu;
 import com.example.quiz_game_app.R;
 
 import MartialLaw_Easy_Package.MartialLaw_Easy_Quiz1;
+import MartialLaw_Hard_Package.MartialLaw_Hard_Quiz1;
 import MartialLaw_Normal_Package.MartialLaw_Normal_Quiz1;
 import PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz1;
 import PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1;
@@ -72,6 +73,8 @@ public class MartialDifficulty extends AppCompatActivity {
         button3.setOnClickListener(new android.view.View.OnClickListener() {
             public void onClick(android.view.View v) {
 
+                Intent intent = new Intent(MartialDifficulty.this, MartialLaw_Hard_Quiz1.class);
+                startActivity(intent);
 
                 // Stop the music
                 minimizeFunction.StopMusic();
