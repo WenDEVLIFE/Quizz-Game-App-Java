@@ -14,6 +14,39 @@
             android:theme="@style/Theme.Quiz_Game_App"
             tools:targetApi="31">
         <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling10"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling9"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling8"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling7"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling6"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling5"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling4"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling3"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling2"
+                android:exported="false" />
+        <activity
+                android:name="WW2_Spelling_Package.WW2_Spelling1"
+                android:exported="false" />
+        <activity
+                android:name="GameDiffulcty_Package.WW2Difficulty"
+                android:exported="false" />
+        <activity
                 android:name="MartialLaw_Hard_Package.TotalScoreMartialHard"
                 android:exported="false" />
         <activity

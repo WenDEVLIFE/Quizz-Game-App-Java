@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import GameDiffulcty_Package.MartialDifficulty;
 import GameDiffulcty_Package.PhDifficulty;
+import GameDiffulcty_Package.WW2Difficulty;
 import functions.MinimizeFunction;
 
 public class Menu extends AppCompatActivity {
@@ -54,6 +55,8 @@ public class Menu extends AppCompatActivity {
 
                 // Stop the music
                 StopMusic();
+
+                finish();
             }
         });
 
@@ -74,6 +77,27 @@ public class Menu extends AppCompatActivity {
 
                 // Stop the music
                 StopMusic();
+                finish();
+            }
+        });
+
+        final Button button2 = findViewById(R.id.button6);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                // Show an alert
+                AlertDialog alertDialog = new AlertDialog.Builder(Menu.this).create();
+                alertDialog.setTitle("Alert WW2");
+                alertDialog.setMessage("World War 2 started on September 1, 1939 and ended on September 2, 1945.");
+                alertDialog.show();
+                alertDialog.closeOptionsMenu();
+
+                Intent intent = new Intent(Menu.this, WW2Difficulty.class);
+                startActivity(intent);
+
+                // Stop the music
+                StopMusic();
+                finish();
             }
         });
 
