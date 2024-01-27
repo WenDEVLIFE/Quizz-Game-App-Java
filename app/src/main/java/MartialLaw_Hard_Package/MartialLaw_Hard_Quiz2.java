@@ -72,6 +72,7 @@ public class MartialLaw_Hard_Quiz2 extends AppCompatActivity {
                 correctText.setText("Correct answer: You didn't answer in time!");
 
                 timer.clearAnimation();
+                timerImage.clearAnimation();
 
                 StopMusic();
             }
@@ -133,6 +134,7 @@ public class MartialLaw_Hard_Quiz2 extends AppCompatActivity {
                 correct.start();
                 tick.stop();
                 countDownTimer.cancel();
+                timerImage.clearAnimation();
 
 
                 // Display to the textview that user got the wrong answer

@@ -96,12 +96,13 @@
             android:layout_marginTop="96dp" />
 
     <TextView
-            android:text="M_dw_y"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="50sp"
+            android:text="Un_ted S_at_s of Ame____"
+            android:layout_width="374dp"
+            android:layout_height="69dp"
+            android:textSize="35sp"
             android:textColor="#FFFFFF"
             android:fontFamily="sans-serif-condensed"
+            android:textAlignment="center"
             android:id="@+id/textViewspell"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -14,6 +14,9 @@
             android:theme="@style/Theme.Quiz_Game_App"
             tools:targetApi="31">
         <activity
+                android:name="WW2_Spelling_Package.TotalScoreSpelling"
+                android:exported="false" />
+        <activity
                 android:name="WW2_Spelling_Package.WW2_Spelling10"
                 android:exported="false" />
         <activity

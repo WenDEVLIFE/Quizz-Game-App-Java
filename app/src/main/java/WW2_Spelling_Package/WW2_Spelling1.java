@@ -41,10 +41,15 @@ public class WW2_Spelling1 extends AppCompatActivity {
 
     private   int score_received1= 0;
     private ImageView timerImage;
+
+    private TextInputLayout textInputLayout;
+    private TextInputEditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ww2_spelling1);
+
+        // Initialize the media player
         mediaPlayer = MediaPlayer.create(this, R.raw.from_russia_with_love_huma);
         mediaPlayer.start();
         mediaPlayer.setLooping(true);
@@ -75,32 +80,26 @@ public class WW2_Spelling1 extends AppCompatActivity {
                 correctText.setText("Correct answer: You didn't answer in time!");
 
                 timer.clearAnimation();
+                timerImage.clearAnimation();
 
                 StopMusic();
+                textInputLayout.setEnabled(false);
+                textInputLayout.setEnabled(false);
+                button.setVisibility(View.INVISIBLE);
+                button1.setVisibility(View.VISIBLE);
             }
         }.start();
 
+        // Get the answer from the user and check if it is correct
+        textInputLayout = findViewById(R.id.textInputLayout);
+        editText = textInputLayout.findViewById(R.id.answer);
+
         button  = findViewById(R.id.submit_button);
         button.setOnClickListener(v -> {
-            TextInputLayout textInputLayout = findViewById(R.id.textInputLayout);
-            TextInputEditText editText = textInputLayout.findViewById(R.id.answer);
 
             String answer = Objects.requireNonNull(editText.getText()).toString();
 
-            if (answer != null) {
-                if (answer.equalsIgnoreCase("Japanese")) {
-                    correct = MediaPlayer.create(WW2_Spelling1.this, R.raw.correctsound);
-                    correct.start();
-                    score_received1 = 1;
-                    correctText.setText("Your score is: " + score_received1);
-                    button1.setVisibility(View.VISIBLE);
-                    button.setVisibility(View.INVISIBLE);
-                    tick.stop();
-                    mediaPlayer.stop();
-                } else {
-                    wrong_Method();
-                }
-            } else {
+            if (answer.equals(null)) {
                 // Display to the textview that the user didn't select an answer
                 AlertDialog alertDialog = new AlertDialog.Builder(WW2_Spelling1.this).create();
                 alertDialog.setTitle("Alert");
@@ -108,6 +107,33 @@ public class WW2_Spelling1 extends AppCompatActivity {
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         (dialog, which) -> dialog.dismiss());
                 alertDialog.show();
+            } else {
+
+                if (answer.equalsIgnoreCase("Japanese")) {
+
+                    // Display to the textview that the user is correct and add 1 to the score variable
+                    correct = MediaPlayer.create(WW2_Spelling1.this, R.raw.correctsound);
+                    correct.start();
+
+                    score_received1++;
+
+                    correctText.setText("Your score is: " + score_received1);
+
+                    // Make the next button visible and the submit button invisible
+                    button1.setVisibility(View.VISIBLE);
+                    button.setVisibility(View.INVISIBLE);
+
+                    textInputLayout.setEnabled(false);
+                    textInputLayout.setEnabled(false);
+
+                    // Stop the music
+                    tick.stop();
+                    mediaPlayer.stop();
+                    countDownTimer.cancel();
+                    timerImage.clearAnimation();
+                } else {
+                    wrong_Method();
+                }
             }
         });
 
@@ -116,7 +142,7 @@ public class WW2_Spelling1 extends AppCompatActivity {
         button1.setOnClickListener(v-> {
 
             // Go to the next page
-            Intent intentph5 = new Intent(this, MartialLaw_Easy_Quiz2.class);
+            Intent intentph5 = new Intent(this, WW2_Spelling2.class);
             intentph5.putExtra("score1", score_received1);
             startActivity(intentph5);
 

@@ -79,6 +79,7 @@ public class PH_USA_Normal_Quiz2 extends AppCompatActivity {
                 correctText.setText("Correct answer: You didn't answer in time!");
 
                 timer.clearAnimation();
+                timerImage.clearAnimation();
 
                 StopMusic();
             }
@@ -132,6 +133,7 @@ public class PH_USA_Normal_Quiz2 extends AppCompatActivity {
                 correct = MediaPlayer.create(PH_USA_Normal_Quiz2.this, R.raw.correctsound);
                 correct.start();
                 tick.stop();
+                timerImage.clearAnimation();
                 countDownTimer.cancel();
 
 
@@ -215,6 +217,7 @@ public class PH_USA_Normal_Quiz2 extends AppCompatActivity {
 
         StopMusic();
         tick.stop();
+        timerImage.clearAnimation();
         countDownTimer.cancel();
         button1.setVisibility(View.VISIBLE);
         button.setVisibility(View.INVISIBLE);

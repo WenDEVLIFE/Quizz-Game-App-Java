@@ -74,6 +74,7 @@ public class US_PH_QUIZ1 extends AppCompatActivity {
                 // Clear or stop animations
                 timerImage.clearAnimation();
 
+
                 // Display to the textview that user didn't answer in time
                 correctText.setText("Correct answer: You didn't answer in time!");
 
@@ -129,6 +130,7 @@ public class US_PH_QUIZ1 extends AppCompatActivity {
                 correct.start();
                 tick.stop();
                 countDownTimer.cancel();
+                timerImage.clearAnimation();
 
 
                 // Display to the textview that user got the wrong answer
@@ -208,6 +210,7 @@ public class US_PH_QUIZ1 extends AppCompatActivity {
         StopMusic();
         tick.stop();
         countDownTimer.cancel();
+        timerImage.clearAnimation();
         button1.setVisibility(View.VISIBLE);
         button.setVisibility(View.INVISIBLE);
     }
