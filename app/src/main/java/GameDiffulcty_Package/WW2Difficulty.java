@@ -17,6 +17,7 @@ import PhilAmericanWar_Hard_Package.PH_USA_Hard_Quiz1;
 import PhilAmericanWar_Normal_package.PH_USA_Normal_Quiz1;
 import Philippine_American_Quiz_package.US_PH_QUIZ1;
 import WW2_Spelling_Package.WW2_Spelling1;
+import WW2_Trivia_Package.WW2_Trivia1;
 import functions.MinimizeFunction;
 
 public class WW2Difficulty extends AppCompatActivity {
@@ -58,7 +59,7 @@ public class WW2Difficulty extends AppCompatActivity {
             public void onClick(android.view.View v) {
                 // Stop the animation
                 button2.clearAnimation();
-                Intent intent = new Intent(WW2Difficulty.this, PH_USA_Normal_Quiz1.class);
+                Intent intent = new Intent(WW2Difficulty.this, WW2_Trivia1.class);
                 startActivity(intent);
                 // Stop the music
                 minimizeFunction.StopMusic();
@@ -66,17 +67,6 @@ public class WW2Difficulty extends AppCompatActivity {
             }
         });
 
-        final Button button3 = findViewById(R.id.hardbutton);
-        button3.setOnClickListener(new android.view.View.OnClickListener() {
-            public void onClick(android.view.View v) {
-
-                Intent intent = new Intent(WW2Difficulty.this, PH_USA_Hard_Quiz1.class);
-                startActivity(intent);
-                // Stop the music
-                minimizeFunction.StopMusic();
-                finish();
-            }
-        });
 
         final Button button4 = findViewById(R.id.backbutton);
         button4.setOnClickListener(new android.view.View.OnClickListener() {
