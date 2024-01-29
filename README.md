@@ -1,0 +1,1 @@
+The purpose of this app is to educate the user on the history about the philippines, with interaction with the app by solving trivia, spelling and etc. By this app user will learn abou the history of the Philippines
